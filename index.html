@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
 	<script src="script.js"></script>
 </head>
 
@@ -43,8 +44,8 @@
 				<input id="payAmount" placeholder="Start Date">
 				<input id="startDate" placeholder="Start Date">
 				<input id="endDate" placeholder="End Date">
-
-				<button type="button" class="btn btn-default" id="submit">Post!</button>
+				
+				<button type="button"  class="btn btn-default" onclick="sendData();">Post!</button>
 			</div>
 		</div>
 	</div>

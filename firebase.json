@@ -1,0 +1,9 @@
+{
+  "firebase": "anthillsignup",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
