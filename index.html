@@ -10,27 +10,43 @@
 
 <body>
 	<div class="container">
-		<div class="row center">
+		<div class="row">
 			<div class="col-sm-12 col-xs-12">
-				<input class="mainInput">
+				<h2>1</h2>
+				<input id="compName" placeholder="enter company name">
+
+
+			<!-- This should be a list of the categories with icons in our js file -->
+				<input id="jobCat" placeholder="Enter company name">
+			<!-- Should we ask for industry? -->
+
+				<h2>2</h2>
+				<form id="jobTime">
+					<input class="jobTimeRadio" type="radio" value="Months">Months
+					<input class="jobTimeRadio" type="radio" value="Weeks">Weeks
+					<input class="jobTimeRadio" type="radio" value="Weeks">Days
+					<input class="jobTimeRadio" type="radio" value="Weeks">Ongoing
+				</form> 
+
+				<input id="jobTitle" placeholder="What is the job title?">
+				<input id="jobDesc" placeholder="Give some details">
+				<h2>3</h2>
+				<input id="payYn" placeholder="Is it paid?">
+
+				<select id="payType">
+					  <option value="Per Project">Per Project</option>
+					  <option value="Per Month">Per Week</option>
+					  <option value="Per Week">Per Week</option>
+					  <option value="Per Day">Per Day</option>
+				</select>
+
+				<input id="payAmount" placeholder="Start Date">
+				<input id="startDate" placeholder="Start Date">
+				<input id="endDate" placeholder="End Date">
+
+				<button type="button" class="btn btn-default" id="submit">Post!</button>
 			</div>
 		</div>
-		<div class="row center">
-			<div class="col-sm-12 col-xs-12">
-			</div>
-		</div>
-		<div class="row center">
-			<div class="col-sm-12 col-xs-12">
-			</div>
-		</div>	
-		<div class="row center">
-			<div class="col-sm-2 col-xs-6">
-				<div class="profile">
-				</div>
-
-			</div>
-		</div>				
-
 	</div>
 </body>
 </html>
