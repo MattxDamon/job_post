@@ -9,28 +9,219 @@
 </head>
 
 <body>
-	<div class="container">
-		<div class="row center">
-			<div class="col-sm-12 col-xs-12">
-				<input class="mainInput">
+
+	<img src="img/faceslong.png" class="img-responsive" alt="">
+	<div class="container form-container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-3">
+				<div class="form-group">
+				    <label for="email">Email</label>
+				    <input type="email" class="form-control" id="email" placeholder="Email">
+				  </div>
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<div class="form-group">
+				    <label for="businessname">Business Name</label>
+				    <input type="text" class="form-control" id="businessname" placeholder="Business Name">
+				  </div>
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<div class="form-group">
+				    <label for="industry">Industry</label>
+				    <input type="text" class="form-control" id="industry" placeholder="Industry">
+				  </div>
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<div class="form-group">
+				    <label for="location">Location</label>
+				    <input type="text" class="form-control" id="location" placeholder="location">
+				  </div>
 			</div>
 		</div>
-		<div class="row center">
-			<div class="col-sm-12 col-xs-12">
+		
+		<hr>
+		<div class="row">
+			<div class="col-xs-12 col-sm-9">
+				<label>What kind of work are you looking for?</label>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="writing" value="writing">
+				    <label for="writing"><h4>Writing</h4><img src="img/skill-cat-icons/writing.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="businessfinance" value="businessfinance">
+				    <label for="businessfinance"><h4>Business</h4><img src="img/skill-cat-icons/businessfinance.png" alt=""></label>
+				    
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="performing" value="performing">
+				    <label for="performing"><h4>Performing</h4><img src="img/skill-cat-icons/performing.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="advtech" value="advtech">
+				    <label for="advtech"><h4>Advanced Technology</h4><img src="img/skill-cat-icons/advtech.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="salesmarketing" value="salesmarketing">
+				    <label for="salesmarketing"><h4>Sales & Marketing</h4><img src="img/skill-cat-icons/salesmarketing.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="socialmedia" value="socialmedia">
+				    <label for="socialmedia"><h4>Social Media</h4><img src="img/skill-cat-icons/socialmedia.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="eventproduction" value="eventproduction">
+				    <label for="eventproduction"><h4>Event Production</h4><img src="img/skill-cat-icons/eventproduction.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="fineart" value="fineart">
+				    <label for="fineart"><h4>Fine Art</h4><img src="img/skill-cat-icons/fineart.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="mobileapp" value="mobileapp">
+				    <label for="mobileapp"><h4>Mobile Apps</h4><img src="img/skill-cat-icons/mobileapp.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="photofilm" value="photofilm">
+				    <label for="photofilm"><h4>Photo & Film</h4><img src="img/skill-cat-icons/photoandfilm.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="website" value="website">
+				    <label for="website"><h4>Build me a website</h4><img src="img/skill-cat-icons/website.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="other" value="other">
+				    <label for="other"><h4>Other</h4><img src="img/skill-cat-icons/other.png" alt=""></label>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<label>What is the expected timeframe?</label>
+				<div class="radio full-width">
+				  
+				    <input type="radio" name="radiogroup2" id="days" value="option1" checked>
+				    <label for="days"><h4>Days</h4><img src="img/timeframe/days.png" alt=""></label>
+				</div>
+				<div class="radio full-width">
+				    <input type="radio" name="radiogroup2" id="weeks" value="option2">
+				    <label for="weeks"><h4>Weeks</h4><img src="img/timeframe/weeks.png" alt=""></label>
+				</div>
+				<div class="radio full-width">
+				    <input type="radio" name="radiogroup2" id="months" value="option1" >
+				    <label for="months"><h4>Months</h4><img src="img/timeframe/months.png" alt=""></label>
+				</div>
+				<div class="radio full-width">
+				    <input type="radio" name="radiogroup2" id="ongoing" value="option2">
+				    <label for="ongoing"><h4>Ongoing</h4><img src="img/timeframe/ongoing.png" alt=""></label>
+				</div>
 			</div>
 		</div>
-		<div class="row center">
-			<div class="col-sm-12 col-xs-12">
+		<hr>
+		<div class="row">
+			<div class="col-sm-12 col-xs-12 col-sm-4">
+				<div class="form-group">
+				    <label for="title">Title</label>
+				    <input type="text" class="form-control" id="title" placeholder="Job Title">
+				</div>
+			</div>
+			<div class="col-sm-12 col-xs-12 col-sm-8">
+				<div class="form-group">
+				    <label for="details">Details, Description, Expectations</label>
+				    <input type="textarea" class="form-control" id="description" placeholder="Enter details">
+				  </div>
+			</div>
+			
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-sm-12 col-xs-12 col-sm-4">
+				<label for="">Paid?</label>
+				<div class="radio-small" id="unpaid-reveal">
+				    <input type="radio" name="radiogroup3" id="unpaid" value="unpaid">
+				    <label for="unpaid"><h4>Unpaid</h4></label>
+				</div>
+					<div class="radio-small" id="paid-reveal">
+					    <input type="radio" name="radiogroup3" id="paid" value="paid">
+					    <label for="paid"><h4>Paid</h4></label>
+					</div>
+					<div id="reveal-if-active">
+					  <div class="form-group col-xs-12 col-sm-6">
+					    <input type="text" class="form-control" id="offering" placeholder="$100.00">
+					  </div>
+					  <div class="form-group col-xs-12 col-sm-6">
+					    <input type="text" class="form-control" id="offering-how" placeholder="offering-how">
+					  </div>
+					</div>
+				
+			</div>
+
+			<div class="col-sm-12 col-xs-12 col-sm-4">
+				<label for="startasap-reveal">Start Date</label>
+				<div class="radio-small" id="startasap-reveal">
+				    <input type="radio" name="radiogroup4" id="startasap" value="startasap">
+				    <label for="startasap"><h4>ASAP</h4></label>
+				</div>
+				<div class="radio-small" id="startother-reveal">
+				    <input type="radio" name="radiogroup4" id="startother" value="startother">
+				    <label for="startother"><h4>Custom</h4></label>
+				</div>
+				<div id="start-reveal-if-active">
+				    <div class="form-group col-xs-12">
+				    	<input type="text" class="form-control" id="startother-input" placeholder="when will this start">
+				    </div>
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-xs-12 col-sm-4">
+				<label for="endflexible-reveal">End Date</label>
+				<div class="radio-small" id="endflexible-reveal">
+				    <input type="radio" name="radiogroup5" id="endflexible" value="endflexible">
+				    <label for="endflexible"><h4>Flexible</h4></label>
+				</div>
+				<div class="radio-small" id="endother-reveal">
+				    <input type="radio" name="radiogroup5" id="endother" value="endother">
+				    <label for="endother"><h4>Custom</h4></label>
+				</div>
+				<div id="end-reveal-if-active">
+				    <div class="form-group col-xs-12">
+				    	<input type="text" class="form-control" id="endother-input" placeholder="when will this end">
+				    </div>
+				</div>
 			</div>
 		</div>	
-		<div class="row center">
-			<div class="col-sm-2 col-xs-6">
-				<div class="profile">
-				</div>
-
-			</div>
-		</div>				
-
+		
+		<hr>
+		<button type="button"  class="btn btn-default" onclick="sendData();">Post!</button>
 	</div>
 </body>
+
+<script>
+	$(document).ready(
+    function(){
+    	$("#reveal-if-active").hide();
+    	$("#start-reveal-if-active").hide();
+    	$("#end-reveal-if-active").hide();
+
+        $("#paid-reveal").click(function () {
+        	$("#reveal-if-active").show();
+        });
+
+        $("#unpaid-reveal").click(function () {
+            $("#reveal-if-active").hide();
+        });
+
+        $("#startasap-reveal").click(function () {
+            $("#start-reveal-if-active").hide();
+        });
+
+        $("#startother-reveal").click(function () {
+            $("#start-reveal-if-active").show();
+        });
+        $("#endflexible-reveal").click(function () {
+            $("#end-reveal-if-active").hide();
+        });
+
+        $("#endother-reveal").click(function () {
+            $("#end-reveal-if-active").show();
+        });
+    });
+</script>
 </html>

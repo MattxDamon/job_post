@@ -1,108 +1,116 @@
-/*Main CSS*/
-
-.col-centered{
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
+.form-container{
+	padding: 25px;
+	width: 800px;
 }
 
-.center{
-	text-align:center;
+.row{
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
-.create-job h1{
-	font-weight: 600;
-	font-size: 30px;
-	text-align: left;
-	font-family: 'Helvetica';
-	color: #ecbb2a;
-}
-
-.create-job input[type=radio]:checked + label {
+.form-control:focus {
+    border-color: 0;
     outline: 0;
-    color: #000;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
-.create-job textarea{
-	height:100px;
+input[type="text"],
+input[type="textarea"],
+input[type="email"]{
+	border:1px solid #000;
+	padding: 20px 10px 20px 10px;
 }
 
-#radio-buttons input[type=radio]{
+
+input[type="text"]:focus,
+input[type="textarea"]:focus,
+input[type="email"]:focus{
+	border:1px solid #ecbb2a;
+	outline:0 !important;
+}
+
+h4{
+	margin: 0;
+	font-size: 14px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+.radio input[type="radio"],
+.radio-small input[type="radio"]{
 	display:none;
 }
 
-#radio-buttons input[type=radio] + label {
-	opacity: .2;
-	background-color: #fff;
-	margin-left: auto;
-	margin-right: auto;
-	display: inline-block;
-	width:25%;
+.radio label{
+	display:inline-block;
 	float:left;
-	padding: 20px;
-	text-align: center;
-}
-
-#radio-buttons input[type="radio"]:checked + label{ 
-	opacity:1;
-}
-
-
-#radio-buttons img{
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	height:auto;
-	width: auto;
-}
-
-#radio-buttons-category{
-	text-align: center;
-}
-
-#radio-buttons-category img{
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	margin-top:12px;
-	opacity:.2;
-}
-
-#radio-buttons-category input[type=radio]{
-	display: none;
-}
-
-input[type=radio]:checked + img{ 
-	opacity: 1 !Important;
-}
-
-#radio-buttons-category label{
-	height: 100px;
-	border-radius: 5px;
-	width:auto;
+	padding:20px;
 	background-color: #ecbb2a;
-	margin-left: auto;
-	color: #000;
-	margin-right: auto;
-	display: inline-block;
-	text-align: center;
-	margin:5px;
-	padding:11px;
-}
-
-.radio-buttons .flow-text{
-	box-shadow: none;
-}
-
-.radio-buttons .field{
-	display: inline-block;
-	float: left;
-	width:29%;
 	margin: 5px;
-	border: 1px solid #ededed;
+	border-radius: 5px;
+	height:120px;
+}
+.radio input[type="radio"]:checked + label{
+	background-color: #abcde2;
+}
+.radio input[type="radio"]:checked + label h4{
+	color:#fff;
 }
 
-.radio-buttons p{
-	font-weight: 300;
-	font-family: 'Helvetica', Arial;
+.radio input[type="radio"]:checked + label img{
+	filter: invert(100%);
+	-webkit-filter: invert(100%);
+	opacity: 1;
 }
+
+.full-width label{
+	width:100% !important;
+}
+
+.small-label-height label{
+	height: auto;
+}
+
+.radio label img{
+	width:50px;
+	opacity: .5;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+
+.radio-small label{
+	background-color: transparent;
+	border:1px solid #000;
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	color:#000;
+	text-align: center;
+}
+
+.radio-small input[type="radio"]:checked + label{
+	background-color: #abcde2;
+	border: 1px solid #abcde2;
+	border:0;
+	color: #fff;
+}
+
+
+
+
+@media (max-width: 1024px){
+	.form-container{
+		width:auto;
+	}
+}
+
+@media (max-width: 767){
+	.radio-small{
+		width:50%;
+	}
+}
+
+/*radio buttons*/
