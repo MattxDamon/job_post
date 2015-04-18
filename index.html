@@ -5,10 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
 	<script src="script.js"></script>
 </head>
 
 <body>
+
 
 	<img src="img/faceslong.png" class="img-responsive" alt="">
 	<div class="container form-container">
@@ -41,8 +43,16 @@
 		
 		<hr>
 		<div class="row">
+			<div class="col-sm-12 col-xs-12">
+				<div class="form-group">
+				    <label for="title">What do you need?</label>
+				    <input type="text" class="form-control" id="title" placeholder="I need...">
+				</div>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-xs-12 col-sm-9">
-				<label>What kind of work are you looking for?</label>
+				<label>What category of work does your job fit into?</label>
 				<div class="radio">
 				    <input type="radio" name="radiogroup1" id="writing" value="writing">
 				    <label for="writing"><h4>Writing</h4><img src="img/skill-cat-icons/writing.png" alt=""></label>
@@ -86,7 +96,11 @@
 				</div>
 				<div class="radio">
 				    <input type="radio" name="radiogroup1" id="website" value="website">
-				    <label for="website"><h4>Build me a website</h4><img src="img/skill-cat-icons/website.png" alt=""></label>
+				    <label for="website"><h4>Builing websites</h4><img src="img/skill-cat-icons/website.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="other" value="other">
+				    <label for="other"><h4>Graphic Design</h4><img src="img/skill-cat-icons/other.png" alt=""></label>
 				</div>
 				<div class="radio">
 				    <input type="radio" name="radiogroup1" id="other" value="other">
@@ -116,15 +130,10 @@
 		</div>
 		<hr>
 		<div class="row">
-			<div class="col-sm-12 col-xs-12 col-sm-4">
+			
+			<div class="col-sm-12 col-xs-12">
 				<div class="form-group">
-				    <label for="title">Title</label>
-				    <input type="text" class="form-control" id="title" placeholder="Job Title">
-				</div>
-			</div>
-			<div class="col-sm-12 col-xs-12 col-sm-8">
-				<div class="form-group">
-				    <label for="details">Details, Description, Expectations</label>
+				    <label for="details">Describe the details, expectations, and goals of this job:</label>
 				    <input type="textarea" class="form-control" id="description" placeholder="Enter details">
 				  </div>
 			</div>
@@ -190,6 +199,7 @@
 		
 		<hr>
 		<button type="button"  class="btn btn-default" onclick="sendData();">Post!</button>
+
 	</div>
 </body>
 
