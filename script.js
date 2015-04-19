@@ -18,10 +18,13 @@ $(document).ready(function() {
 	//For initial if they don't change them
 	company_name=$('#payType').val();
 
+
 	$('#compName').change(function() {
 		company_name=$(this).val();
 	});
+
 	$('#jobCat').change(function() {
+		job_category = document.getElementById('jobCat').value;
 		job_category=$(this).val();
 	});
 	$('#jobTitle').change(function() {
@@ -30,9 +33,12 @@ $(document).ready(function() {
 	$('#jobDesc').change(function() {
 		job_description=$(this).val();
 	});
+
 	$('#jobTime').change(function() {
+		job_timeframe = document.getElementById('jobTime').value;
 		job_timeframe=$(this).val();
 	});
+
 	$('#payYn').change(function() {
 		pay_yn=$(this).val();
 	});
