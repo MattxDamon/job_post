@@ -18,9 +18,6 @@ $(document).ready(function() {
 	//For initial if they don't change them
 	company_name=$('#payType').val();
 
-
-
-
 	$('#compName').change(function() {
 		company_name=$(this).val();
 	});

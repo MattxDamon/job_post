@@ -14,13 +14,23 @@
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-<<<<<<< HEAD
+
+.sub-title{
+	background-color: #ecbb2a;
+	color:#fff;
+	font-size:16px;
+	padding: 20px 150px;
+}
 
 input[type="text"],
 input[type="textarea"],
 input[type="email"]{
 	border:1px solid #000;
 	padding: 20px 10px 20px 10px;
+}
+
+input[type="textarea"]{
+	padding-bottom: 100px;
 }
 
 
@@ -35,7 +45,23 @@ h4{
 	margin: 0;
 	font-size: 14px;
 	text-align: center;
+	padding-top: 20px;
 	padding-bottom: 5px;
+	display: inline-block;
+}
+
+.radio label img{
+	width:50px;
+	padding:10px;
+	display: inline-block;
+	float: left;
+}
+
+.steps{
+	font-weight: 200;
+	color:#ccc;
+	font-size: 14px;
+	padding: 15px 0;
 }
 
 .radio input[type="radio"],
@@ -46,14 +72,17 @@ h4{
 .radio label{
 	display:inline-block;
 	float:left;
-	padding:20px;
-	background-color: #ecbb2a;
+	padding:5px 10px 5px 5px;
+	background-color: transparent;
+	border: 1px solid #000;
 	margin: 5px;
 	border-radius: 5px;
-	height:120px;
+	height:auto;
 }
+
 .radio input[type="radio"]:checked + label{
-	background-color: #abcde2;
+	background-color: #ecbb2a;
+	border:1px solid #ecbb2a;
 }
 .radio input[type="radio"]:checked + label h4{
 	color:#fff;
@@ -73,30 +102,42 @@ h4{
 	height: auto;
 }
 
-.radio label img{
-	width:50px;
-	opacity: .5;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
+
+.need{
+	font-size:28px;
+	padding-top: 25px !important;
+	padding-bottom: 25px !important;
 }
 
 
 .radio-small label{
 	background-color: transparent;
-	border:1px solid #000;
 	width: 100%;
-	padding: 10px;
-	border-radius: 5px;
 	color:#000;
-	text-align: center;
 }
 
-.radio-small input[type="radio"]:checked + label{
+.radio-small label h4{
+	font-weight: 600;
+	font-size: 28px;
+	opacity:.2;
+}
+
+.radio-small input[type="radio"]:checked + label h4{
+	opacity:1;
+}
+
+input[type=submit]{
+	float: right;
 	background-color: #abcde2;
-	border: 1px solid #abcde2;
-	border:0;
 	color: #fff;
+	width:200px;
+	padding:10px;
+	font-weight: 600;
+	border-bottom: 4px solid #99b9cf; 
+}
+
+input[type=submit]:hover{
+	color:#fff;
 }
 
 
@@ -106,14 +147,24 @@ h4{
 	.form-container{
 		width:auto;
 	}
+	input[type=submit]{
+		width:100%;
+	}
+
+
 }
 
-@media (max-width: 767){
+@media (max-width: 767px){
 	.radio-small{
 		width:50%;
 	}
+
+	.radio label{
+		width:100%;
+	}
+	.sub-title{
+	padding: 20px;
+}
 }
 
 /*radio buttons*/
-=======
->>>>>>> 7ccc9467b060ac8aa83f5017f3753241151a2ae3
