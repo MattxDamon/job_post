@@ -140,9 +140,6 @@ input[type=submit]:hover{
 	color:#fff;
 }
 
-
-
-
 @media (max-width: 1024px){
 	.form-container{
 		width:auto;

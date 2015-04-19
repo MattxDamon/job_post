@@ -16,26 +16,23 @@ var end_date;
 
 $(document).ready(function() {
 	//For initial if they don't change them
-	company_name=$('#payType').val();
-
 
 	$('#compName').change(function() {
 		company_name=$(this).val();
 	});
 
 	$('#jobCat').change(function() {
-		job_category = document.getElementById('jobCat').value;
 		job_category=$(this).val();
 	});
 	$('#jobTitle').change(function() {
 		job_title=$(this).val();
 	});
+
 	$('#jobDesc').change(function() {
 		job_description=$(this).val();
 	});
 
 	$('#jobTime').change(function() {
-		job_timeframe = document.getElementById('jobTime').value;
 		job_timeframe=$(this).val();
 	});
 
@@ -54,6 +51,12 @@ $(document).ready(function() {
 	$('#endDate').change(function() {
 		end_date=$(this).val();
 	});
+	$('#startDateOther').change(function() {
+		start_date_other=$(this).val();
+	});
+	$('#endDateOther').change(function() {
+		end_date_other=$(this).val();
+	});
 
 });
 
@@ -68,6 +71,8 @@ function sendData(){
 		payType: pay_type,
 		startDate: start_date,
 		endDate: end_date,
+		startDateOther: start_date_other,
+		endDateOther: end_date_other,
 		payAmount: pay_amount
   	});
 }
