@@ -84,8 +84,8 @@ $(document).ready(function() {
 	$('#graphicdesign').click(function() {
 		job_category='Graphic Design';
 	});		
-	$('#categoryOther').change(function() {
-		start_date=$(this).val();
+	$('#categoryother').change(function() {
+		job_category=$(this).val();
 	});	
 
 
