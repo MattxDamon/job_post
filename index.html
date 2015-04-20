@@ -13,7 +13,7 @@
 
 
 	<img id="mainImage" src="img/postjobgraphic.png" class="img-responsive" alt="">
-		<div class="sub-title">Post a job before May 1st FOR FREE and we'll get your jobs online before we launch.  You'll receive an email to activate your account the night before May 1st and test out Ant Hill before anyone else!</div>
+		<div class="sub-title">Post a job before May 1st FOR FREE and we'll get your jobs online before we launch.  Check your inbox on May 1st to activate your account!</div>
 	<div class="container form-container">
 
 		<div class="row">
@@ -88,8 +88,8 @@
 				    <label for="mobileapp"><h4>Mobile Apps</h4><img src="img/skill-cat-icons/mobileapp.png" alt=""></label>
 				</div>
 				<div class="radio">
-				    <input type="radio" name="radiogroup1" id="photofilm" value="Photography">
-				    <label for="photofilm"><h4>Photography</h4><img src="img/skill-cat-icons/photoandfilm.png" alt=""></label>
+				    <input type="radio" name="radiogroup1" id="photography" value="Photography">
+				    <label for="photography"><h4>Photography</h4><img src="img/skill-cat-icons/photoandfilm.png" alt=""></label>
 				</div>
 				
 				<div class="radio">
@@ -125,19 +125,24 @@
 				    </label>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-3" id="jobTime">
+			
+			<div class="col-xs-12 col-sm-3 top-padding-iphone" id="jobTime">
 				<label>What is the expected timeframe?</label>
 				<div class="radio full-width">
+				    <input type="radio" name="radiogroup2" id="gig" value="Gig">
+				    <label for="gig"><h4>One day gig</h4><img src="img/timeframe/gig.png" alt=""></label>
+				</div>
+				<div class="radio full-width">
 				    <input type="radio" name="radiogroup2" id="days" value="Days">
-				    <label for="days"><h4>Days</h4><img src="img/timeframe/days.png" alt=""></label>
+				    <label for="days"><h4>A few days</h4><img src="img/timeframe/days.png" alt=""></label>
 				</div>
 				<div class="radio full-width">
 				    <input type="radio" name="radiogroup2" id="weeks" value="Weeks">
-				    <label for="weeks"><h4>Weeks</h4><img src="img/timeframe/weeks.png" alt=""></label>
+				    <label for="weeks"><h4>A few weeks</h4><img src="img/timeframe/weeks.png" alt=""></label>
 				</div>
 				<div class="radio full-width">
 				    <input type="radio" name="radiogroup2" id="months" value="Months">
-				    <label for="months"><h4>Months</h4><img src="img/timeframe/months.png" alt=""></label>
+				    <label for="months"><h4>A few months</h4><img src="img/timeframe/months.png" alt=""></label>
 				</div>
 				<div class="radio full-width">
 				    <input type="radio" name="radiogroup2" id="ongoing" value="Ongoing">
@@ -154,6 +159,7 @@
 				    <input type="textarea" class="form-control" id="jobDesc" placeholder="Enter details">
 				  </div>
 			</div>
+		
 			<div class="col-xs-12 col-sm-4">
 				<div class="form-group">
 					<label for="payAmount">What is the compensation?</label>
@@ -176,7 +182,7 @@
 		</div>
 		<hr>
 		<div class="row">
-			<div class="steps">YOUR JOB'S TIMEFRAME</div>
+			<div class="steps">YOUR JOB'S START AND END DATES</div>
 			<div class=" col-xs-12 col-sm-6">
 				<div id="startDate">
 					<div class="radio full-width" id="startasap-reveal">
@@ -197,15 +203,12 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="col-xs-12 col-sm-6">
 				<div id="endDate">
-					<div class="radio full-width" id="gig-reveal">
-					    <input type="radio" name="radiogroup5" id="gig" value="Gig">
-					    <label for="gig"><h4>One Day Gig</h4><img src="img/deadline.png" alt=""></label>
-					</div>
 					<div class="radio full-width" id="endnone-reveal">
 					    <input type="radio" name="radiogroup5" id="endNone" value="None">
-					    <label for="endNone"><h4>No Deadline</h4><img src="img/deadline.png" alt=""></label>
+					    <label for="endNone"><h4>Finish ASAP</h4><img src="img/deadline.png" alt=""></label>
 					</div>
 					<div class="radio full-width" id="endflexible-reveal">
 					    <input type="radio" name="radiogroup5" id="endFlex" value="Flexible">
@@ -239,7 +242,7 @@
     	$("#end-reveal-if-active").hide();
 
 //skills
-    	$("#websites, #entertainment, #eventproduction, #finance, #fineart, #graphicdesign, #mobileapp, #photography, #research, #salesmarketing, #socialmedia, #videography, #writing").click(function () {
+    	$("#websites, #entertainment, #eventproduction, #finance, #fineart, #graphicdesign, #mobileapp, #photography, #programming, #research, #salesmarketing, #socialmedia, #videography, #writing").click(function () {
             $("#other-reveal-if-active").hide();
         });
 
@@ -257,7 +260,7 @@
         });
 
 //deadline
-        $("#gig-reveal, #endnone-reveal, #endflexible-reveal").click(function () {
+        $("#endnone-reveal, #endflexible-reveal").click(function () {
             $("#end-reveal-if-active").hide();
         });
         

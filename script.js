@@ -7,6 +7,7 @@ var company_email='';
 var company_location='';
 var company_industry='';
 var job_category='';
+var categoryOther='';
 var job_description='';
 var job_timeframe='';
 var job_title='';
@@ -21,8 +22,8 @@ var end_date_other='';
 var payReqs=false;
 var catPlace='';
 var timePlace='';
-var radioChecking=["#writing","#finance","#entertainment", "#salesmarketing","#socialmedia", "#eventproduction", "#fineart", "#mobileapp", '#photofilm', '#Videography', '#website', '#graphicdesign', '#other', "#days","#weeks","#months", "#ongoing", "#payYn", "#startASAP", "#startother", "#gig", "#endNone", "#endFlex", "#endother"];
-var inputBoxes=['#endDateOther','#startDateOther','#payAmount',"#jobDesc","#jobTitle"];
+var radioChecking=["#writing","#finance","#entertainment", "#salesmarketing","#socialmedia", "#eventproduction", "#fineart", "#mobileapp", '#photography', '#videography', '#website', '#graphicdesign', '#research', '#programming' '#other', "#gig", "#days", "#weeks","#months", "#ongoing", "#payYn", "#startASAP", "#startother", "#gig", "#endNone", "#endFlex", "#endother"];
+var inputBoxes=['#categoryOther, #endDateOther','#startDateOther','#payAmount',"#jobDesc","#jobTitle"];
 
 $(document).ready(function() {
 	//For initial if they don't change them
@@ -89,6 +90,9 @@ $(document).ready(function() {
 
 
 //this is the timeframe selection
+	$('#gig').click(function() {
+		job_timeframe='Gig';
+	});
 	$('#days').click(function() {
 		job_timeframe='Days';
 	});
@@ -190,7 +194,7 @@ function sendData(){
 				$('.container').hide();
 				$('.sub-title').hide();
 				//Here is where you can add css for the post another job page
-				$('.sub-title').html('<h1>Thanks for posting a job!</h1><input style="float: center;" type="submit" value="POST ANOTHER" class="btn btn-submit-post" onclick="rePost();">').fadeIn();
+				$('.sub-title').html('<h1>Thanks for posting a job!</h1><input style="text-align: center;" type="submit" value="POST ANOTHER" class="btn btn-submit-post" onclick="rePost();">').fadeIn();
 	        }
 	    });
     }

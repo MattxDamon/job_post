@@ -53,6 +53,7 @@ h4{
 
 .radio label img{
 	width:50px;
+	height:50px;
 	padding:10px;
 	display: inline-block;
 	float: left;
@@ -61,7 +62,7 @@ h4{
 .steps{
 	font-weight: 200;
 	color:#ccc;
-	font-size: 14px;
+	font-size: 18px;
 	padding: 15px 0;
 }
 
@@ -104,12 +105,6 @@ h4{
 }
 
 
-.need{
-	font-size:28px;
-	padding-top: 25px !important;
-	padding-bottom: 25px !important;
-}
-
 
 .radio-small label{
 	background-color: transparent;
@@ -149,18 +144,36 @@ input[type=submit]:hover{
 	border: 0 !important;
 }
 
+.hr-iphone{
+	display:none;
+}
+
 @media (max-width: 1024px){
+
+	.top-padding-iphone{
+		padding-top: 15px;
+	}
+
+	.steps{
+		padding:15px;
+	}
 	.form-container{
 		width:auto;
 	}
 	input[type=submit]{
 		width:100%;
 	}
+	.hr-iphone{
+	display:block;
+}
+
 
 
 }
 
 @media (max-width: 767px){
+
+
 	.radio-small{
 		width:50%;
 	}
