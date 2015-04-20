@@ -84,9 +84,9 @@ $(document).ready(function() {
 	$('#graphicdesign').click(function() {
 		job_category='Graphic Design';
 	});		
-	$('#other').click(function() {
-		job_category='Other';
-	});		
+	$('#categoryOther').change(function() {
+		start_date=$(this).val();
+	});	
 
 
 
@@ -141,6 +141,9 @@ $(document).ready(function() {
 //Start Date
 	$('#startasap-reveal').click(function() {
 		start_date='ASAP';
+	});
+	$('#startflex-reveal').change(function() {
+		start_date='Flexible';
 	});
 	$('#startDateOther').change(function() {
 		start_date=$(this).val();
