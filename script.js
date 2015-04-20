@@ -10,14 +10,13 @@ var job_category='';
 var job_description='';
 var job_timeframe='';
 var job_title='';
-var pay_yn='';
+var pay_yn='Paid';
 var pay_type='';
 var pay_amount='';
 var start_date='';
 var end_date='';
 var start_date_other='';
 var end_date_other='';
-
 
 var payReqs=false;
 var catPlace='';
@@ -28,7 +27,6 @@ var inputBoxes=['#endDateOther','#startDateOther','#payAmount',"#jobDesc","#jobT
 $(document).ready(function() {
 	//For initial if they don't change them
 	pay_type=$('#payType').val();
-
 
 
 	$('#compName').change(function() {
@@ -119,12 +117,10 @@ $(document).ready(function() {
 		if (!payReqs){
 			payReqs=true;
 			pay_yn="Unpaid";
-			console.log("HEY");
 		}
 		else{
 			pay_yn="Paid";
 			checkPayReqs();
-			console.log("HEYO");
 		}
 	});
 
@@ -243,7 +239,28 @@ function sendData(){
 function rePost(){
 	//showing job parts of the page again, not the sub title the second time (although we could)
 	$('#mainImage').show();
-	$('.sub-title').hide();
+
+
+	//This is sort of for fun, but I thought we could do something like this:
+	$('.sub-title').css("text-align","center");
+	var funMessage=Math.floor((Math.random() * 5) + 1);
+	if (funMessage==1)
+	$('.sub-title').html('Give it another go, boss.');
+	
+	if (funMessage==2)
+	$('.sub-title').html('The economy and your workload are smiling right now.');
+
+	if (funMessage==3)
+	$('.sub-title').html('It is business owners like you that make the world go round.');
+
+	if (funMessage==4)
+	$('.sub-title').html('Find another hardworking Anthiller!');
+
+	if (funMessage==5)
+	$('.sub-title').html('Post again, and watch the applications come flying in.');
+
+
+//END of the fun stuff
 
 	//Clearing Active Radioboxes
 	for (var i=0; i<radioChecking.length; i++) {
@@ -256,8 +273,22 @@ function rePost(){
 	}
 	$("#start-reveal-if-active").hide();
 	$("#end-reveal-if-active").hide();
-
 	$('#payType').val("For the Project");
+	payReqs=false;
+	job_category='';
+	job_description='';
+	job_timeframe='';
+	job_title='';
+	pay_yn='';
+	pay_type='';
+	pay_amount='';
+	start_date='';
+	end_date='';
+	start_date_other='';
+	end_date_other='';
+	pay_yn='Paid';
+
+	$('.error').html('');
 
 	$('.container').slideDown();
 }
