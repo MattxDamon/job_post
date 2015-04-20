@@ -24,7 +24,8 @@
 
 input[type="text"],
 input[type="textarea"],
-input[type="email"]{
+input[type="email"],
+input[type="select"]{
 	border:1px solid #000;
 	padding: 20px 10px 20px 10px;
 }
@@ -138,6 +139,14 @@ input[type=submit]{
 
 input[type=submit]:hover{
 	color:#fff;
+}
+
+.custom-form-group{
+	margin: 0 0 5px 5px !important;
+}
+
+.custom-form-group input{
+	border: 0 !important;
 }
 
 @media (max-width: 1024px){

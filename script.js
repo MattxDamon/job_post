@@ -82,9 +82,9 @@ $(document).ready(function() {
 	$('#graphicdesign').click(function() {
 		job_category='Graphic Design';
 	});		
-	$('#other').click(function() {
-		job_category='Other';
-	});		
+	$('#categoryOther').change(function() {
+		start_date=$(this).val();
+	});	
 
 
 
@@ -138,6 +138,9 @@ $(document).ready(function() {
 	$('#startasap-reveal').click(function() {
 		start_date='ASAP';
 	});
+	$('#startflex-reveal').change(function() {
+		start_date='Flexible';
+	});
 	$('#startDateOther').change(function() {
 		start_date=$(this).val();
 	});
@@ -182,12 +185,10 @@ function sendData(){
 	    event.preventDefault();
         
 	    $.ajax({
-	        
 	        success: function() {
 				$('#mainImage').hide();
 				$('.container').hide();
 				$('.sub-title').hide();
-
 				//Here is where you can add css for the post another job page
 				$('.sub-title').html('<h1>Thanks for posting a job!</h1><input style="float: center;" type="submit" value="POST ANOTHER" class="btn btn-submit-post" onclick="rePost();">').fadeIn();
 	        }
