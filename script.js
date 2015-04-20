@@ -186,12 +186,10 @@ function sendData(){
 	    event.preventDefault();
         
 	    $.ajax({
-	        
 	        success: function() {
 				$('#mainImage').hide();
 				$('.container').hide();
 				$('.sub-title').hide();
-
 				//Here is where you can add css for the post another job page
 				$('.sub-title').html('<h1>Thanks for posting a job!</h1><input style="float: center;" type="submit" value="POST ANOTHER" class="btn btn-submit-post" onclick="rePost();">').fadeIn();
 	        }

@@ -12,7 +12,7 @@
 <body>
 
 
-	<img id="mainImage"src="img/postjobgraphic.png" class="img-responsive" alt="">
+	<img id="mainImage" src="img/postjobgraphic.png" class="img-responsive" alt="">
 		<div class="sub-title">Post a job before May 1st FOR FREE and we'll get your jobs online before we launch.  You'll receive an email to activate your account the night before May 1st and test out Ant Hill before anyone else!</div>
 	<div class="container form-container">
 
@@ -58,35 +58,30 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-9" id="jobCat">
 				<label>What category of work does your job fit into?</label>
+				
 				<div class="radio">
-				    <input type="radio" name="radiogroup1" id="writing" value="writing">
-				    <label for="writing"><h4>Writing</h4><img src="img/skill-cat-icons/writing.png" alt=""></label>
-				</div>
-				<div class="radio">
-				    <input type="radio" name="radiogroup1" id="finance" value="Finance">
-				    <label for="finance"><h4>Finance</h4><img src="img/skill-cat-icons/businessfinance.png" alt=""></label>
-				    
+				    <input type="radio" name="radiogroup1" id="website" value="Website">
+				    <label for="website"><h4>Building websites</h4><img src="img/skill-cat-icons/website.png" alt=""></label>
 				</div>
 				<div class="radio">
 				    <input type="radio" name="radiogroup1" id="entertainment" value="Entertainment">
 				    <label for="entertainment"><h4>Entertainment</h4><img src="img/skill-cat-icons/entertainment.png" alt=""></label>
-				</div>
-				
-				<div class="radio">
-				    <input type="radio" name="radiogroup1" id="salesmarketing" value="Sales & Marketing">
-				    <label for="salesmarketing"><h4>Sales & Marketing</h4><img src="img/skill-cat-icons/salesmarketing.png" alt=""></label>
-				</div>
-				<div class="radio">
-				    <input type="radio" name="radiogroup1" id="socialmedia" value="Social Media">
-				    <label for="socialmedia"><h4>Social Media</h4><img src="img/skill-cat-icons/socialmedia.png" alt=""></label>
 				</div>
 				<div class="radio">
 				    <input type="radio" name="radiogroup1" id="eventproduction" value="Event Production">
 				    <label for="eventproduction"><h4>Event Production</h4><img src="img/skill-cat-icons/eventproduction.png" alt=""></label>
 				</div>
 				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="finance" value="Finance">
+				    <label for="finance"><h4>Finance</h4><img src="img/skill-cat-icons/businessfinance.png" alt=""></label>
+				</div>
+				<div class="radio">
 				    <input type="radio" name="radiogroup1" id="fineart" value="Fine Art">
 				    <label for="fineart"><h4>Fine Art</h4><img src="img/skill-cat-icons/fineart.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="graphicdesign" value="Graphic Design">
+				    <label for="graphicdesign"><h4>Graphic Design</h4><img src="img/skill-cat-icons/graphicdesign.png" alt=""></label>
 				</div>
 				<div class="radio">
 				    <input type="radio" name="radiogroup1" id="mobileapp" value="Mobile App">
@@ -96,21 +91,38 @@
 				    <input type="radio" name="radiogroup1" id="photofilm" value="Photography">
 				    <label for="photofilm"><h4>Photography</h4><img src="img/skill-cat-icons/photoandfilm.png" alt=""></label>
 				</div>
+				
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="programming" value="Programming">
+				    <label for="programming"><h4>Programming</h4><img src="img/skill-cat-icons/programming.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="research" value="Research">
+				    <label for="research"><h4>Research</h4><img src="img/skill-cat-icons/research.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="salesmarketing" value="Sales & Marketing">
+				    <label for="salesmarketing"><h4>Sales & Marketing</h4><img src="img/skill-cat-icons/salesmarketing.png" alt=""></label>
+				</div>
+				<div class="radio">
+				    <input type="radio" name="radiogroup1" id="socialmedia" value="Social Media">
+				    <label for="socialmedia"><h4>Social Media</h4><img src="img/skill-cat-icons/socialmedia.png" alt=""></label>
+				</div>
 				<div class="radio">
 				    <input type="radio" name="radiogroup1" id="Videography" value="Videography">
 				    <label for="Videography"><h4>Videography</h4><img src="img/skill-cat-icons/videography.png" alt=""></label>
 				</div>
 				<div class="radio">
-				    <input type="radio" name="radiogroup1" id="website" value="Website">
-				    <label for="website"><h4>Building websites</h4><img src="img/skill-cat-icons/website.png" alt=""></label>
+				    <input type="radio" name="radiogroup1" id="writing" value="writing">
+				    <label for="writing"><h4>Writing</h4><img src="img/skill-cat-icons/writing.png" alt=""></label>
 				</div>
-				<div class="radio">
-				    <input type="radio" name="radiogroup1" id="graphicdesign" value="Graphic Design">
-				    <label for="graphicdesign"><h4>Graphic Design</h4><img src="img/skill-cat-icons/graphicdesign.png" alt=""></label>
-				</div>
-				<div class="radio">
+				<div class="radio" id="other-reveal">
 				    <input type="radio" name="radiogroup1" id="other" value="Other">
-				    <label for="other"><h4>Other</h4><img src="img/skill-cat-icons/other.png" alt=""></label>
+				    <label for="other"><h4>Other</h4><img src="img/skill-cat-icons/other.png" alt="">
+					<div class="form-group custom-form-group" id="other-reveal-if-active">
+					    <input type="text" class="form-control" id="categoryOther" placeholder="Add a custom category!">
+					    </div>
+				    </label>
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-3" id="jobTime">
@@ -171,14 +183,20 @@
 					    <input type="radio" name="radiogroup4" id="startASAP" value="asap">
 					    <label for="startASAP"><h4>Start ASAP</h4><img src="img/startdate.png" alt=""></label>
 					</div>
+					<div class="radio" id="startflex-reveal">
+					    <input type="radio" name="radiogroup4" id="startflex" value="flexible">
+					    <label for="startflex"><h4>Flexible Start Date</h4><img src="img/startdate.png" alt=""></label>
+					</div>
 					<div class="radio" id="startother-reveal">
 					    <input type="radio" name="radiogroup4" id="startother" value="other">
-					    <label for="startother"><h4>Custom Start Date</h4><img src="img/startdate.png" alt=""></label>
+					    <label for="startother"><h4>Custom Start Date</h4><img src="img/startdate.png" alt="">
+						 <div class="form-group custom-form-group" id="start-reveal-if-active">
+					    	<input type="text" class="form-control" id="startDateOther" placeholder="e.g., 05/20/2015">
+					    </div>
+					    </label>
 					</div>
 				</div>
-			    <div class="form-group col-xs-12" id="start-reveal-if-active">
-			    	<input type="text" class="form-control" id="startDateOther" placeholder="When do you need this to start?">
-			    </div>
+			   
 			</div>
 		</div>
 		<div class="row">
@@ -198,12 +216,14 @@
 					</div>
 					<div class="radio" id="endother-reveal">
 					    <input type="radio" name="radiogroup5" id="endother" value="Other">
-					    <label for="endother"><h4>Custom Deadline</h4><img src="img/deadline.png" alt=""></label>
+					    <label for="endother"><h4>Custom Deadline</h4><img src="img/deadline.png" alt="">
+					    	<div class="form-group custom-form-group" id="end-reveal-if-active">
+					    	<input type="text" class="form-control" id="endDateOther" placeholder="e.g., 05/20/2015"></div>
+					    </label>
+
 					</div>
 				</div>
-				<div class="form-group col-xs-12" id="end-reveal-if-active">
-			    	<input type="text" class="form-control" id="endDateOther" placeholder="What do you need this to end?">
-			    </div>
+				
 			</div>
 		</div>
 		<hr>
@@ -218,10 +238,21 @@
 <script>
 	$(document).ready(
     function(){
+    	$("#other-reveal-if-active").hide();
     	$("#start-reveal-if-active").hide();
     	$("#end-reveal-if-active").hide();
 
-        $("#startasap-reveal").click(function () {
+//skills
+    	$("#websites, #entertainment, #eventproduction, #finance, #fineart, #graphicdesign, #mobileapp, #photography, #research, #salesmarketing, #socialmedia, #videography, #writing").click(function () {
+            $("#other-reveal-if-active").hide();
+        });
+
+        $("#other-reveal").click(function () {
+            $("#other-reveal-if-active").show();
+        });
+
+//start
+        $("#startasap-reveal, #startflex-reveal").click(function () {
             $("#start-reveal-if-active").hide();
         });
 
@@ -229,15 +260,8 @@
             $("#start-reveal-if-active").show();
         });
 
-        $("#gig-reveal").click(function () {
-            $("#end-reveal-if-active").hide();
-        });
-
-        $("#endnone-reveal").click(function () {
-            $("#end-reveal-if-active").hide();
-        });
-
-        $("#endflexible-reveal").click(function () {
+//deadline
+        $("#gig-reveal, #endnone-reveal, #endflexible-reveal").click(function () {
             $("#end-reveal-if-active").hide();
         });
         
