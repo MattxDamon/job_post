@@ -1,5 +1,6 @@
+		
 
-
+$(document).ready(function() {
 var ref= new Firebase("https://anthillsignup.firebaseio.com/jobPost");
 
 var company_name='';
@@ -7,6 +8,7 @@ var company_email='';
 var company_location='';
 var company_industry='';
 var job_category='';
+var categoryOther='';
 var job_description='';
 var job_timeframe='';
 var job_title='';
@@ -21,13 +23,12 @@ var end_date_other='';
 var payReqs=false;
 var catPlace='';
 var timePlace='';
-var radioChecking=["#writing","#finance","#entertainment", "#salesmarketing","#socialmedia", "#eventproduction", "#fineart", "#mobileapp", '#photofilm', '#Videography', '#website', '#graphicdesign', '#other', "#days","#weeks","#months", "#ongoing", "#payYn", "#startASAP", "#startother", "#gig", "#endNone", "#endFlex", "#endother"];
-var inputBoxes=['#endDateOther','#startDateOther','#payAmount',"#jobDesc","#jobTitle"];
+var radioChecking=["#writing","#finance","#entertainment", "#salesmarketing","#socialmedia", "#eventproduction", "#fineart", "#mobileapp", '#photography', '#videography', '#website', '#graphicdesign', '#research', '#programming', '#other', "#gig", "#days", "#weeks","#months", "#ongoing", "#payYn", "#startASAP", "#startother", "#endNone", "#endFlex", "#endother"];
+var inputBoxes=['#categoryOther, #endDateOther','#startDateOther','#payAmount',"#jobDesc","#jobTitle"];
 
-$(document).ready(function() {
+
 	//For initial if they don't change them
 	pay_type=$('#payType').val();
-
 
 	$('#compName').change(function() {
 		company_name=$(this).val();
@@ -47,7 +48,6 @@ $(document).ready(function() {
 // This is the job category selection
 	$('#writing').click(function() {
 		job_category='Writing';
-
 	});
 	$('#finance').click(function() {
 		job_category='Finance';
@@ -70,10 +70,10 @@ $(document).ready(function() {
 	$('#mobileapp').click(function() {
 		job_category='Mobile Apps';
 	});	
-	$('#photofilm').click(function() {
+	$('#photography').click(function() {
 		job_category='Photography';
 	});	
-	$('#Videography').click(function() {
+	$('#videography').click(function() {
 		job_category='Videography';
 	});
 	$('#website').click(function() {
@@ -83,12 +83,15 @@ $(document).ready(function() {
 		job_category='Graphic Design';
 	});		
 	$('#categoryOther').change(function() {
-		start_date=$(this).val();
+		job_category=$(this).val();
 	});	
 
 
 
 //this is the timeframe selection
+	$('#gig').click(function() {
+		job_timeframe='Gig';
+	});
 	$('#days').click(function() {
 		job_timeframe='Days';
 	});
@@ -102,7 +105,6 @@ $(document).ready(function() {
 		job_timeframe='Ongoing';
 	});
 
-
 	$('#jobTitle').change(function() {
 		job_title=$(this).val();
 	});
@@ -110,8 +112,6 @@ $(document).ready(function() {
 	$('#jobDesc').change(function() {
 		job_description=$(this).val();
 	});
-
-
 
 	$('#payYn').click(function() {
 		if (!payReqs){
@@ -136,19 +136,16 @@ $(document).ready(function() {
 
 //Start Date
 	$('#startasap-reveal').click(function() {
-		start_date='ASAP';
+		start_date='Start ASAP';
 	});
 	$('#startflex-reveal').change(function() {
-		start_date='Flexible';
+		start_date='Flexible Start Date';
 	});
 	$('#startDateOther').change(function() {
 		start_date=$(this).val();
 	});
 
 //End Date
-	$('#gig-reveal').click(function() {
-		end_date='One Day Gig';
-	});
 	$('#endnone-reveal').click(function() {
 		end_date='No Deadline';
 	});
@@ -158,13 +155,13 @@ $(document).ready(function() {
 	$('#endDateOther').change(function() {
 		end_date=$(this).val();
 	});
-});
 
-$("#finalSubmit").click(function() {
+$('#jobPost').submit(function(event) { 
 	var errors = '';
-
+	var date = Date();
 
 	if (company_name != '' && company_email != '' && company_location != '' && company_industry != '' &&  job_category!= '' &&  job_description!= '' &&  job_timeframe!= '' &&  job_title!= '' &&  payReqs && start_date!= '' && end_date!= '') {
+
 		ref.push({
 			companyName: company_name,
 			companyEmail: company_email,
@@ -178,19 +175,25 @@ $("#finalSubmit").click(function() {
 			payType: pay_type,
 			payAmount: pay_amount,
 			startDate: start_date,
-			endDate: end_date	
+			endDate: end_date,
+			dateCreated: date	
 	  	});
-            
-        
+	  	$(window).on('beforeunload', function(){
+    		ref.close();
+		});
+		console.log("HEO!");
 	    event.preventDefault();
+	    console.log("HELLO!");
         
 	    $.ajax({
 	        success: function() {
+	        	console.log("HEY!")
 				$('#mainImage').hide();
 				$('.container').hide();
 				$('.sub-title').hide();
+				$('.success').css("display","block");
 				//Here is where you can add css for the post another job page
-				$('.sub-title').html('<h1>Thanks for posting a job!</h1><input style="float: center;" type="submit" value="POST ANOTHER" class="btn btn-submit-post" onclick="rePost();">').fadeIn();
+				$('.success').html('<h1>Thanks for posting a job on Ant Hill!</h1><h3>It is business owners like you that keep the economy healthy.  If you have any questions at all, send us a <a href="mailto:marcella@anthilljobs.com">message.</a></h3><br><input style="float: center;" type="submit" value="POST ANOTHER" class="btn btn-submit-post" onclick="rePost();">').fadeIn();
 	        }
 	    });
     }
@@ -231,15 +234,15 @@ $("#finalSubmit").click(function() {
     if (errors != '') {
         handleError(errors);   
     }
-    
+    return false;
+	});
 });
-
 
 
 function rePost(){
 	//showing job parts of the page again, not the sub title the second time (although we could)
 	$('#mainImage').show();
-
+	$('.success').css("display","none");
 
 	//This is sort of for fun, but I thought we could do something like this:
 	$('.sub-title').css("text-align","center");
@@ -276,6 +279,7 @@ function rePost(){
 	$('#payType').val("For the Project");
 	payReqs=false;
 	job_category='';
+	categoryOther='';
 	job_description='';
 	job_timeframe='';
 	job_title='';
