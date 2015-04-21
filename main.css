@@ -147,7 +147,9 @@ h4{
 }
 
 input[type=submit]{
-	float: right;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 	background-color: #abcde2;
 	color: #fff;
 	width:200px;

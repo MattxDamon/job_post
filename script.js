@@ -181,13 +181,12 @@ $('#jobPost').submit(function(event) {
 	  	$(window).on('beforeunload', function(){
     		ref.close();
 		});
-		console.log("HEO!");
+		
 	    event.preventDefault();
-	    console.log("HELLO!");
         
 	    $.ajax({
 	        success: function() {
-	        	console.log("HEY!")
+	        	$('#jobPost').hide();
 				$('#mainImage').hide();
 				$('.container').hide();
 				$('.sub-title').hide();
@@ -199,37 +198,37 @@ $('#jobPost').submit(function(event) {
     }
         
     if (company_name == '') {
-        errors += " enter a company name";   
+        errors += " enter a company name,";   
     }
     if (company_email == '') {
-        errors += " enter an email";   
+        errors += " enter an email,";   
     }
     if (company_location == '') {
-        errors += " enter a location";   
+        errors += " enter a location,";   
     }
     if (company_industry == '') {
-        errors += " enter an industry";   
+        errors += " enter an industry,";   
     }  
     if (job_category == '') {
-        errors += " enter a job category";   
+        errors += " enter a job category,";   
     }    
     if (job_description == '') {
-        errors += " enter a job description";   
+        errors += " enter a job description,";   
     }   
     if (job_timeframe == '') {
-        errors += " enter a job timeframe";   
+        errors += " enter a job timeframe,";   
     }   
     if (job_title == '') {
-        errors += " enter a job title";   
+        errors += " enter a job title,";   
     }   
     if (!payReqs) {
-        errors += " enter payment details";   
+        errors += " enter payment details,";   
     }   
     if (start_date == '') {
-        errors += " enter a start date";   
+        errors += " enter a start date,";   
     }   
     if (end_date == '') {
-        errors += " enter an end date";   
+        errors += " enter an end date,";   
     }
     if (errors != '') {
         handleError(errors);   
@@ -293,7 +292,6 @@ function rePost(){
 	pay_yn='Paid';
 
 	$('.error').html('');
-
 	$('.container').slideDown();
 }
 
