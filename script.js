@@ -160,7 +160,7 @@ $(document).ready(function() {
 	});
 });
 
-function sendData(){
+$("#finalSubmit").click(function() {
 	var errors = '';
 
 
@@ -195,44 +195,44 @@ function sendData(){
 	    });
     }
         
-    else if (company_name == '') {
+    if (company_name == '') {
         errors += " enter a company name";   
     }
-    else if (company_email == '') {
+    if (company_email == '') {
         errors += " enter an email";   
     }
-    else if (company_location == '') {
+    if (company_location == '') {
         errors += " enter a location";   
     }
-    else if (company_industry == '') {
+    if (company_industry == '') {
         errors += " enter an industry";   
     }  
-    else if (job_category == '') {
+    if (job_category == '') {
         errors += " enter a job category";   
     }    
-    else if (job_description == '') {
+    if (job_description == '') {
         errors += " enter a job description";   
     }   
-    else if (job_timeframe == '') {
+    if (job_timeframe == '') {
         errors += " enter a job timeframe";   
     }   
-    else if (job_title == '') {
+    if (job_title == '') {
         errors += " enter a job title";   
     }   
-    else if (!payReqs) {
+    if (!payReqs) {
         errors += " enter payment details";   
     }   
-    else if (start_date == '') {
+    if (start_date == '') {
         errors += " enter a start date";   
     }   
-    else if (end_date == '') {
+    if (end_date == '') {
         errors += " enter an end date";   
     }
     if (errors != '') {
         handleError(errors);   
     }
     
-};
+});
 
 
 
