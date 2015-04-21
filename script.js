@@ -22,13 +22,12 @@ var end_date_other='';
 var payReqs=false;
 var catPlace='';
 var timePlace='';
-var radioChecking=["#writing","#finance","#entertainment", "#salesmarketing","#socialmedia", "#eventproduction", "#fineart", "#mobileapp", '#photography', '#videography', '#website', '#graphicdesign', '#research', '#programming' '#other', "#gig", "#days", "#weeks","#months", "#ongoing", "#payYn", "#startASAP", "#startother", "#gig", "#endNone", "#endFlex", "#endother"];
+var radioChecking=["#writing","#finance","#entertainment", "#salesmarketing","#socialmedia", "#eventproduction", "#fineart", "#mobileapp", '#photography', '#videography', '#website', '#graphicdesign', '#research', '#programming', '#other', "#gig", "#days", "#weeks","#months", "#ongoing", "#payYn", "#startASAP", "#startother", "#endNone", "#endFlex", "#endother"];
 var inputBoxes=['#categoryOther, #endDateOther','#startDateOther','#payAmount',"#jobDesc","#jobTitle"];
 
 $(document).ready(function() {
 	//For initial if they don't change them
 	pay_type=$('#payType').val();
-
 
 	$('#compName').change(function() {
 		company_name=$(this).val();
@@ -48,7 +47,6 @@ $(document).ready(function() {
 // This is the job category selection
 	$('#writing').click(function() {
 		job_category='Writing';
-
 	});
 	$('#finance').click(function() {
 		job_category='Finance';
@@ -71,10 +69,10 @@ $(document).ready(function() {
 	$('#mobileapp').click(function() {
 		job_category='Mobile Apps';
 	});	
-	$('#photofilm').click(function() {
+	$('#photography').click(function() {
 		job_category='Photography';
 	});	
-	$('#Videography').click(function() {
+	$('#videography').click(function() {
 		job_category='Videography';
 	});
 	$('#website').click(function() {
@@ -83,7 +81,7 @@ $(document).ready(function() {
 	$('#graphicdesign').click(function() {
 		job_category='Graphic Design';
 	});		
-	$('#categoryother').change(function() {
+	$('#categoryOther').change(function() {
 		job_category=$(this).val();
 	});	
 
@@ -106,7 +104,6 @@ $(document).ready(function() {
 		job_timeframe='Ongoing';
 	});
 
-
 	$('#jobTitle').change(function() {
 		job_title=$(this).val();
 	});
@@ -114,8 +111,6 @@ $(document).ready(function() {
 	$('#jobDesc').change(function() {
 		job_description=$(this).val();
 	});
-
-
 
 	$('#payYn').click(function() {
 		if (!payReqs){
@@ -140,19 +135,16 @@ $(document).ready(function() {
 
 //Start Date
 	$('#startasap-reveal').click(function() {
-		start_date='ASAP';
+		start_date='Start ASAP';
 	});
 	$('#startflex-reveal').change(function() {
-		start_date='Flexible';
+		start_date='Flexible Start Date';
 	});
 	$('#startDateOther').change(function() {
 		start_date=$(this).val();
 	});
 
 //End Date
-	$('#gig-reveal').click(function() {
-		end_date='One Day Gig';
-	});
 	$('#endnone-reveal').click(function() {
 		end_date='No Deadline';
 	});
@@ -166,7 +158,6 @@ $(document).ready(function() {
 
 function sendData(){
 	var errors = '';
-
 
 	if (company_name != '' && company_email != '' && company_location != '' && company_industry != '' &&  job_category!= '' &&  job_description!= '' &&  job_timeframe!= '' &&  job_title!= '' &&  payReqs && start_date!= '' && end_date!= '') {
 		ref.push({
@@ -184,8 +175,7 @@ function sendData(){
 			startDate: start_date,
 			endDate: end_date	
 	  	});
-            
-        
+
 	    event.preventDefault();
         
 	    $.ajax({
@@ -193,43 +183,44 @@ function sendData(){
 				$('#mainImage').hide();
 				$('.container').hide();
 				$('.sub-title').hide();
+				$('.success').css("display","block");
 				//Here is where you can add css for the post another job page
-				$('.sub-title').html('<h1>Thanks for posting a job!</h1><input style="text-align: center;" type="submit" value="POST ANOTHER" class="btn btn-submit-post" onclick="rePost();">').fadeIn();
+				$('.success').html('<h1>Thanks for posting a job on Ant Hill!</h1><h3>It is business owners like you that keep the economy healthy.  If you have any questions at all, send us a <a href="mailto:marcella@anthilljobs.com">message.</a></h3><br><input style="float: center;" type="submit" value="POST ANOTHER" class="btn btn-submit-post" onclick="rePost();">').fadeIn();
 	        }
 	    });
     }
         
-    else if (company_name == '') {
+    if (company_name == '') {
         errors += " enter a company name";   
     }
-    else if (company_email == '') {
+    if (company_email == '') {
         errors += " enter an email";   
     }
-    else if (company_location == '') {
+    if (company_location == '') {
         errors += " enter a location";   
     }
-    else if (company_industry == '') {
+    if (company_industry == '') {
         errors += " enter an industry";   
     }  
-    else if (job_category == '') {
+    if (job_category == '') {
         errors += " enter a job category";   
     }    
-    else if (job_description == '') {
+    if (job_description == '') {
         errors += " enter a job description";   
     }   
-    else if (job_timeframe == '') {
+    if (job_timeframe == '') {
         errors += " enter a job timeframe";   
     }   
-    else if (job_title == '') {
+    if (job_title == '') {
         errors += " enter a job title";   
     }   
-    else if (!payReqs) {
+    if (!payReqs) {
         errors += " enter payment details";   
     }   
-    else if (start_date == '') {
+    if (start_date == '') {
         errors += " enter a start date";   
     }   
-    else if (end_date == '') {
+    if (end_date == '') {
         errors += " enter an end date";   
     }
     if (errors != '') {
@@ -243,7 +234,7 @@ function sendData(){
 function rePost(){
 	//showing job parts of the page again, not the sub title the second time (although we could)
 	$('#mainImage').show();
-
+	$('.success').css("display","none");
 
 	//This is sort of for fun, but I thought we could do something like this:
 	$('.sub-title').css("text-align","center");
@@ -280,6 +271,7 @@ function rePost(){
 	$('#payType').val("For the Project");
 	payReqs=false;
 	job_category='';
+	categoryOther='';
 	job_description='';
 	job_timeframe='';
 	job_title='';
