@@ -1,6 +1,6 @@
 		
 
-$(document).ready(function() {
+
 var ref= new Firebase("https://anthillsignup.firebaseio.com/jobPost");
 
 var company_name='';
@@ -26,7 +26,7 @@ var timePlace='';
 var radioChecking=["#writing","#finance","#entertainment", "#salesmarketing","#socialmedia", "#eventproduction", "#fineart", "#mobileapp", '#photography', '#videography', '#website', '#graphicdesign', '#research', '#programming', '#other', "#gig", "#days", "#weeks","#months", "#ongoing", "#payYn", "#startASAP", "#startother", "#endNone", "#endFlex", "#endother"];
 var inputBoxes=['#categoryOther, #endDateOther','#startDateOther','#payAmount',"#jobDesc","#jobTitle"];
 
-
+$(document).ready(function() {
 	//For initial if they don't change them
 	pay_type=$('#payType').val();
 
